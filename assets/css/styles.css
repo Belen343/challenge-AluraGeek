@@ -1,0 +1,53 @@
+  :root {
+    --fondo-principal: #F8F5F2;
+    --color-primario: #FFCA05;
+    --color-secundario: #67BAEB;
+    --color-terciario: #FFE066;
+    --fuente-titulos: 'Lily Script One', cursive;
+    --fuente-texto: 'Times New Roman', sans-serif;
+  }
+
+  /* Cabecera */
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--fondo-principal);
+  }
+  
+  /* Contenedor del logo */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Estilo del logo */
+  .logo {
+    max-width: 90px;
+    height: auto;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .header {
+      height: 60px;
+    }
+  
+    .logo {
+      max-width: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      height: 50px;
+    }
+  
+    .logo {
+      max-width: 40px;
+    }
+  }
+  
