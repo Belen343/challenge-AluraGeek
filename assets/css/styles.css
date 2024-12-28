@@ -1,12 +1,45 @@
-  :root {
+/* Variables */
+:root {
     --fondo-principal: #F8F5F2;
     --color-primario: #FFCA05;
     --color-secundario: #67BAEB;
-    --color-terciario: #FFE066;
+    --color-detalles: #999;
+    --color-texto: #4D4C78;
+    --color-primario-hover: #FFE066;
+    --color-secundario-hover: #A3D8F4;
+    --fuente-principal: 'Roboto', sans-serif;
     --fuente-titulos: 'Lily Script One', cursive;
-    --fuente-texto: 'Times New Roman', sans-serif;
+  }
+  
+  /* Global */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 1.75rem;
   }
 
+  p{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: var(--fuente-principal);
+  }
+
+  span{
+    font-size: .75rem;
+    font-weight: bold;
+    font-family: var(--fuente-principal);
+  }
+  
   /* Cabecera */
   .header {
     display: flex;
@@ -14,9 +47,11 @@
     align-items: center;
     height: 100px;
     background-color: var(--fondo-principal);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease;
+    margin-bottom: 2rem;
   }
   
-  /* Contenedor del logo */
   .logo-container {
     display: flex;
     justify-content: center;
@@ -24,30 +59,194 @@
     width: 100%;
   }
   
-  /* Estilo del logo */
   .logo {
     max-width: 90px;
     height: auto;
   }
   
+  /* Main */
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  /* Mis libros */
+  .books-section {
+    flex: 0 0 70%;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .no-books-message {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .books-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    z-index: 1;
+  }
+  
+  .card {
+    border: 1px solid var(--color-detalles);
+    background-color: var(--fondo-principal);
+    border-radius: 8px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    max-width: 150px;
+    border-radius: 8px;
+    height: auto;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  .card-container--footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-container--acciones {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .card-container--acciones button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .card-container--acciones img{
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Sección 2: Agregar libro */
+  .add-book-section {
+    flex: 0 0 28%;
+    padding: 1rem;
+  }
+  
+  .book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 1rem;
+  }
+  
+  input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-detalles);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  input:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 4px var(--color-primario);
+    outline: none;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--color-detalles);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: var(--color-texto);
+  }
+
+  .btn-primary{
+    background-color: var(--color-primario);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primario-hover);
+    transform: scale(1.02);
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-secundario);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-secundario-hover);
+    transform: scale(1.02);
+  }
+  
   /* Responsividad */
   @media (max-width: 768px) {
     .header {
-      height: 60px;
+        height: 60px;
+    }
+    
+    .logo {
+        max-width: 50px;
+    }
+
+    .main {
+      flex-direction: column-reverse;
+      padding: 1rem;
+      margin: 1rem;
+      gap: 1rem;
     }
   
-    .logo {
-      max-width: 50px;
+    .books-section,
+    .add-book-section {
+      flex: 0 0 100%; /* Ocupan el 100% del ancho en pantallas pequeñas */
+    }
+  
+    .book-card {
+      width: calc(50% - 1rem); /* 2 columnas */
+    }
+
+    .add-book-section {
+        padding: 0;
     }
   }
   
   @media (max-width: 480px) {
     .header {
-      height: 50px;
+        height: 50px;
     }
-  
+    
     .logo {
-      max-width: 40px;
+        max-width: 40px;
     }
-  }
-  
+
+    .book-card {
+      width: 100%; /* 1 columna */
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+      }
+    
+      .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+      }
+  }  

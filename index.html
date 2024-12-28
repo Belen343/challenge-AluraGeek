@@ -17,12 +17,32 @@
         </div>
     </header>
 
-    <main>
-
-    </main>
+    <main class="main">
+        <!-- Sección 1: Mis libros -->
+        <section class="books-section">
+          <h1 class="section-title">Mis libros</h1>
+          <div class="books-container" id="booksContainer"></div>
+        </section>
+      
+        <!-- Sección 2: Agregar libro -->
+        <section class="add-book-section">
+          <h1 class="section-title">Agregar libro</h1>
+          <form class="book-form" id="bookForm">
+            <input type="text" id="bookName" placeholder="Nombre del libro" required>
+            <input type="number" id="bookPrice" placeholder="Precio del libro" required>
+            <input type="url" id="bookImage" placeholder="URL de la portada" required>
+            <div class="form-buttons">
+              <button type="submit" class="btn btn-primary">Agregar</button>
+              <button type="reset" class="btn btn-secondary">Limpiar</button>
+            </div>
+          </form>
+        </section>
+      </main>          
 
     <footer>
 
     </footer>
+
+    <script src="./assets/js/mostrarLibros.js"></script>
 </body>
 </html>
