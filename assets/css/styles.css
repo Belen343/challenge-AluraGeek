@@ -19,6 +19,10 @@
   body {
     font-family: var(--fuente-principal);
     color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* La altura mínima es igual a la altura del viewport */
+    margin: 0;
   }
   
   h1 {
@@ -70,6 +74,7 @@
     justify-content: space-between;
     padding: 1rem;
     margin: 1rem;
+    flex: 1;
   }
   
   /* Mis libros */
@@ -135,7 +140,7 @@
     height: 18px;
   }
   
-  /* Sección 2: Agregar libro */
+  /* Agregar libro */
   .add-book-section {
     flex: 0 0 28%;
     padding: 1rem;
@@ -194,6 +199,52 @@
   .btn-secondary:hover {
     background-color: var(--color-secundario-hover);
     transform: scale(1.02);
+  }
+
+  /* Footer */
+  .footer {
+    background-color: var(--color-detalles);
+    padding: 15px;
+    text-align: center;
+  }
+
+  .footer-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .logo-footer {
+    width: 25px;
+    height: auto;
+  }
+
+  .footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-primario);
+  }
+
+  .footer-container p {
+    margin: 0;
+  }
+
+  .footer-texto1{
+    font-size: 12px;
+    color: #FFF;
+  }
+
+  .footer-texto2{
+    font-size: 10px;
+    color: var(--color-primario-hover);
   }
   
   /* Responsividad */
