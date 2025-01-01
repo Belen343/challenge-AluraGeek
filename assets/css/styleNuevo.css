@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.background {
+    background-image: url('../img/fondoBiblioteca.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0.5);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4D4C78;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.button {
+    background-color: #3c94c7;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #257eb1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}

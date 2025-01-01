@@ -1,0 +1,28 @@
+{
+  "libros": [
+    {
+      "id": "1",
+      "name": "Binding 13",
+      "price": "413.50",
+      "imageUrl": "./assets/img/Libros/portada-libro1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "El arte de ser nosotros",
+      "price": "325.00",
+      "imageUrl": "./assets/img/Libros/portada-libro2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "El tiempo que tuvimos",
+      "price": "260.00",
+      "imageUrl": "./assets/img/Libros/portada-libro3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Etéreo",
+      "price": "420.00",
+      "imageUrl": "./assets/img/Libros/portada-libro4.jpg"
+    }
+  ]
+}

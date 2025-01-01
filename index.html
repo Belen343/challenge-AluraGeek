@@ -8,7 +8,6 @@
     <title>Challenge AluraGeek</title>
     <link rel="shortcut icon" href="./assets/img/icono-book.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header class="header">
@@ -27,17 +26,17 @@
         <!-- Sección 2: Agregar libro -->
         <section class="add-book-section">
           <h1 class="section-title">Agregar libro</h1>
-          <form class="book-form" id="bookForm">
-            <input type="text" id="bookName" placeholder="Nombre del libro" required>
-            <input type="number" id="bookPrice" placeholder="Precio del libro" required>
-            <input type="url" id="bookImage" placeholder="URL de la portada" required>
+          <form class="book-form" id="bookForm" data-formulario>
+            <input type="text" id="bookName" placeholder="Nombre del libro" required data-name>
+            <input type="number" id="bookPrice" placeholder="Precio del libro" required data-price>
+            <input type="text" id="bookImage" placeholder="URL de la portada" required data-url>
             <div class="form-buttons">
               <button type="submit" class="btn btn-primary">Agregar</button>
               <button type="reset" class="btn btn-secondary">Limpiar</button>
             </div>
           </form>
         </section>
-      </main>          
+      </main>  
 
       <footer class="footer">
         <div class="footer-container">
@@ -48,8 +47,9 @@
           <p class="footer-texto1">Desarrollado por: Belen Hernández Virgen</p>
           <p class="footer-texto2">Alura Latam:   2024</p>
         </div>
-      </footer>      
-
-    <script src="./assets/js/mostrarLibros.js"></script>
+      </footer>  
+      
+    <script src="./assets/js/mostrarLibros.js" type="module"></script>
+    <script src="./assets/js/crearLibro.js" type="module"></script>
 </body>
 </html>
