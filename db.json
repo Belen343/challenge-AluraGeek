@@ -1,10 +1,10 @@
 {
   "libros": [
     {
-      "id": "1",
       "name": "Binding 13",
-      "price": "413.50",
-      "imageUrl": "./assets/img/Libros/portada-libro1.jpg"
+      "price": "415.00",
+      "imageUrl": "http://127.0.0.1:5500/assets/img/Libros/portada-libro1.jpg",
+      "id": "1"
     },
     {
       "id": "2",
@@ -13,13 +13,13 @@
       "imageUrl": "./assets/img/Libros/portada-libro2.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "El tiempo que tuvimos",
       "price": "260.00",
       "imageUrl": "./assets/img/Libros/portada-libro3.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Etéreo",
       "price": "420.00",
       "imageUrl": "./assets/img/Libros/portada-libro4.jpg"

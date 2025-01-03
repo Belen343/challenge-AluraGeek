@@ -1,18 +1,23 @@
 import { conexionAPI } from "./conexionAPI.js";
+import { configurarFormularioActualizacion } from "./modificarLibro.js";
+
+// Configura la funcionalidad de actualización al cargar la página
+configurarFormularioActualizacion();
+
 const booksContainer = document.getElementById("booksContainer");
 
 export default function crearCard(id, name, price, imageUrl) {
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
-          <img src="${imageUrl}" alt="Portada del libro ${name}">
+          <img src="${imageUrl}" alt="Portada del libro ${name}" class="card-image">
           <div class="card-container--info">
-            <p>${name}</p>
+            <p class="card-name">${name}</p>
             <div class="card-container--footer">
-              <span>$${price}</span>
+              <span class="card-price">$${price}</span>
               <div class="card-container--acciones">
-                <button title="Actualizar">
-                  <img src="./assets/img/icon-update.svg" alt="Icono de actualizar">
+                <button class="update-btn" title="Actualizar" data-id="${id}">
+                    <img src="./assets/img/icon-update.svg" alt="Icono de actualizar">
                 </button>
                 <button class="delete-btn" title="Eliminar" data-id="${id}">
                   <img src="./assets/img/icono-delete.svg" alt="Icono de eliminar">

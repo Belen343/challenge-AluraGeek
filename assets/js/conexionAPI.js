@@ -46,6 +46,42 @@ async function eliminarLibro(id) {
     return true; // Retornar éxito si no hay errores
 }
 
+async function actualizarLibro(id, name, price, imageUrl) {
+    // Imprime los datos antes de enviar la solicitud
+    console.log("Datos enviados para actualizar:", {
+        id,
+        name,
+        price,
+        imageUrl,
+    });
+
+    // Validar que los campos no estén vacíos
+    if (!name || !price || !imageUrl) {
+        throw new Error("Todos los campos deben estar completos.");
+    }
+
+    // Realizar la solicitud PUT
+    const conexion = await fetch(`http://localhost:3001/libros/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            name,
+            price,
+            imageUrl,
+        }),
+    });
+
+    // Verifica si la solicitud fue exitosa
+    if (!conexion.ok) {
+        throw new Error("Error al actualizar el libro.");
+    }
+
+    // Retorna la respuesta como JSON
+    return conexion.json();
+}
+
 export const conexionAPI={
-    listarLibros, enviarLibro, eliminarLibro,
+    listarLibros, enviarLibro, eliminarLibro, actualizarLibro,
 }

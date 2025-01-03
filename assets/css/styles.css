@@ -140,6 +140,11 @@
     background: none;
     border: none;
     cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+
+  .card-container--acciones button:hover {
+    transform: scale(1.2);
   }
 
   .card-container--acciones img{
@@ -209,44 +214,52 @@
   }
 
   /* Modal */
-  /* Estilos para el modal */
-.modal {
-  display: none; /* Ocultamos el modal por defecto */
-  position: fixed; /* Fija el modal en la pantalla */
-  z-index: 1; /* Asegura que esté encima de otros elementos */
-  left: 0;
-  top: 0;
-  width: 100%; /* Ancho completo */
-  height: 100%; /* Alto completo */
-  overflow: auto; /* Si el contenido es más grande, permite el desplazamiento */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-}
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 5px;
-  width: 80%; /* Ancho del modal */
-  text-align: center;
-}
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+  }
 
-.close-btn {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
+  .modal-content input {
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-.close-btn:hover,
-.close-btn:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.75rem;
+    color: var(--color-primario);
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px;
+    transition: color 0.3s, transform 0.2s;
+  }
+
+  .close:hover {
+    color: var(--color-primario-hover);
+    transform: scale(1.1);
+  }
 
   /* Footer */
   .footer {

@@ -36,7 +36,23 @@
             </div>
           </form>
         </section>
-      </main>  
+      </main>
+      
+      <div id="modalActualizar" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span class="cerrarModal close">&times;</span>
+            <h1>Actualizar Libro</h1>
+            <form id="formActualizar" class="book-form">
+                <input type="text" id="updateName" placeholder="Nombre del libro" required>
+                <input type="number" id="updatePrice" placeholder="Precio del libro" required>
+                <input type="text" id="updateImageUrl" placeholder="URL de la portada" required>
+                <div class="form-buttons">
+                  <button type="submit" class="btn btn-primary">Actualizar</button>
+                  <button type="button" class="btn btn-secondary cerrarModal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>         
 
       <footer class="footer">
         <div class="footer-container">
@@ -51,5 +67,6 @@
       
     <script src="./assets/js/mostrarLibros.js" type="module"></script>
     <script src="./assets/js/crearLibro.js" type="module"></script>
+    <script src="./assets/js/modificarLibro.js" type="module"></script>
 </body>
 </html>
