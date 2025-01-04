@@ -2,7 +2,7 @@
   "libros": [
     {
       "name": "Binding 13",
-      "price": "415.00",
+      "price": "450.00",
       "imageUrl": "http://127.0.0.1:5500/assets/img/Libros/portada-libro1.jpg",
       "id": "1"
     },
@@ -19,10 +19,10 @@
       "imageUrl": "./assets/img/Libros/portada-libro3.jpg"
     },
     {
-      "id": "4",
-      "name": "Etéreo",
-      "price": "420.00",
-      "imageUrl": "./assets/img/Libros/portada-libro4.jpg"
+      "id": 4,
+      "name": "Orgullo y prejuicio",
+      "price": "280.00",
+      "imageUrl": "./assets/img/Libros/portada-libro6.jpg"
     }
   ]
 }
